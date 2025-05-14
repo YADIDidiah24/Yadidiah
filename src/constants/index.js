@@ -41,7 +41,7 @@ import tensorflowIcon from "../assets/tech/tensorflow.svg";
 import postgresqlIcon from "../assets/tech/postgresql.svg";
 import snowflakeIcon from "../assets/tech/Snowflake.png";
 import bigqueryIcon from "../assets/tech/BigQuery.svg";
-import mlflowIcon from "../assets/tech/MLflow.png";
+// import mlflowIcon from "../assets/tech/MLflow.png";
 import sagemakerIcon from "../assets/tech/SageMaker.png";
 import vertexIcon from "../assets/tech/vertexAI.svg"; 
 import transformerIcon from "../assets/tech/transformer.png"; 
@@ -141,7 +141,7 @@ const otherTechnologies = [
   { name: "PostgreSQL", icon: postgresqlIcon },
   { name: "Snowflake", icon: snowflakeIcon },
   { name: "BigQuery", icon: bigqueryIcon },
-  { name: "MLflow", icon: mlflowIcon },
+  // { name: "MLflow", icon: mlflowIcon },
   { name: "SageMaker", icon: sagemakerIcon },
   { name: "Vertex AI", icon: vertexIcon },
 
