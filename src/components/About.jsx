@@ -8,20 +8,17 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+  <div className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full bg-gradient-to-r from-green-400 to-pink-500 p-[2px] rounded-[20px] shadow-lg"
     >
-      <div
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-gray-900 rounded-[20px] py-6 px-10 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-white text-lg font-semibold text-center">{title}</h3>
+      <div className="bg-gray-900 rounded-[20px] py-6 px-4 sm:px-6 md:px-10 min-h-[250px] sm:min-h-[280px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt={title} className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
+        <h3 className="text-white text-base sm:text-lg font-semibold text-center px-2">{title}</h3>
       </div>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const SkillBar = ({ skill, level, delay }) => (
@@ -30,8 +27,8 @@ const SkillBar = ({ skill, level, delay }) => (
     className="mb-4"
   >
     <div className="flex justify-between mb-2">
-      <span className="text-white font-medium">{skill}</span>
-      <span className="text-gray-400">{level}%</span>
+      <span className="text-white font-medium text-sm sm:text-base">{skill}</span>
+      <span className="text-gray-400 text-sm sm:text-base">{level}%</span>
     </div>
     <div className="w-full bg-gray-700 rounded-full h-2">
       <motion.div
@@ -47,14 +44,14 @@ const SkillBar = ({ skill, level, delay }) => (
 const ExperienceCard = ({ year, role, company, description, index }) => (
   <motion.div
     variants={fadeIn("left", "spring", index * 0.2, 0.75)}
-    className="relative pl-8 pb-8 border-l-2 border-gradient-to-b from-green-400 to-pink-500"
+    className="relative pl-6 sm:pl-8 pb-8 border-l-2 border-green-400"
   >
     <div className="absolute -left-2 top-0 w-4 h-4 bg-gradient-to-r from-green-400 to-pink-500 rounded-full"></div>
-    <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-      <span className="text-green-400 font-semibold text-sm">{year}</span>
-      <h4 className="text-white text-xl font-bold mt-1">{role}</h4>
-      <h5 className="text-gray-300 text-lg mb-3">{company}</h5>
-      <p className="text-gray-400 leading-relaxed">{description}</p>
+    <div className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg">
+      <span className="text-green-400 font-semibold text-xs sm:text-sm">{year}</span>
+      <h4 className="text-white text-lg sm:text-xl font-bold mt-1">{role}</h4>
+      <h5 className="text-gray-300 text-base sm:text-lg mb-3">{company}</h5>
+      <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{description}</p>
     </div>
   </motion.div>
 );
@@ -62,18 +59,18 @@ const ExperienceCard = ({ year, role, company, description, index }) => (
 const StatCard = ({ number, label, icon, index }) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.1, 0.75)}
-    className="text-center p-6 bg-gray-800 rounded-lg shadow-lg"
+    className="text-center p-4 sm:p-6 bg-gray-800 rounded-lg shadow-lg"
   >
-    <div className="text-3xl mb-2">{icon}</div>
+    <div className="text-2xl sm:text-3xl mb-2">{icon}</div>
     <motion.h3
-      className="text-3xl font-bold text-white mb-2"
+      className="text-2xl sm:text-3xl font-bold text-white mb-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, delay: index * 0.2 }}
     >
       {number}
     </motion.h3>
-    <p className="text-gray-400">{label}</p>
+    <p className="text-gray-400 text-sm sm:text-base">{label}</p>
   </motion.div>
 );
 
@@ -116,8 +113,6 @@ const About = () => {
     { skill: "Business Intelligence", level: 80 }
   ];
 
-
-
   const stats = [
     { number: "4+", label: "Years Experience", icon: "🚀" },
     { number: "50+", label: "Projects Completed", icon: "💼" },
@@ -126,15 +121,15 @@ const About = () => {
   ];
 
   return (
-    <>
+    <div className="px-4 sm:px-6 lg:px-8">
       <motion.div variants={textVariant()}>
-        <p className="text-gray-400 text-lg font-medium">Introduction</p>
-        <h2 className="text-white text-4xl font-bold">Overview.</h2>
+        <p className="text-gray-400 text-base sm:text-lg font-medium">Introduction</p>
+        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 mb-8 text-gray-300 text-lg max-w-3xl leading-relaxed"
+        className="mt-4 mb-8 text-gray-300 text-base sm:text-lg max-w-3xl leading-relaxed"
       >
         I am a skilled computer science professional based in Dubai, UAE, with over four years of coding experience
         and proficiency in multiple programming languages, including Python, Java, and C/C++. My expertise spans
@@ -145,10 +140,10 @@ const About = () => {
       {/* Statistics Section */}
       <motion.div
         variants={textVariant()}
-        className="mb-16"
+        className="mb-12 sm:mb-16"
       >
-        <h3 className="text-white text-2xl font-bold mb-8 text-center">Key Achievements</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <h3 className="text-white text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Key Achievements</h3>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((stat, index) => (
             <StatCard key={stat.label} {...stat} index={index} />
           ))}
@@ -156,18 +151,18 @@ const About = () => {
       </motion.div>
 
       {/* Services Cards */}
-      <div className="mt-16 flex flex-wrap gap-8 justify-center mb-16">
+      <div className="mt-12 sm:mt-16 flex flex-wrap gap-4 sm:gap-6 lg:gap-8 justify-center mb-12 sm:mb-16">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
 
-      {/* Tabbed Section */}
+      {/* Technical Skills Section */}
       <motion.div
         variants={textVariant()}
-        className="mt-16"
+        className="mt-12 sm:mt-16"
       >
-        <h3 className="text-white text-2xl font-bold mb-8 text-center">Technical Skills</h3>
+        <h3 className="text-white text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Technical Skills</h3>
         
         {/* Skills Dropdown Sections */}
         <div className="max-w-4xl mx-auto space-y-4">
@@ -186,13 +181,13 @@ const About = () => {
                 onClick={() => setActiveSkillCategory(
                   activeSkillCategory === category.key ? null : category.key
                 )}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-700 transition-colors duration-300" 
+                className="w-full px-4 sm:px-6 py-4 flex items-center justify-between text-left hover:bg-gray-700 transition-colors duration-300" 
               >
-                <span className="text-white text-lg font-semibold">{category.title}</span>
+                <span className="text-white text-base sm:text-lg font-semibold pr-4">{category.title}</span>
                 <motion.div
                   animate={{ rotate: activeSkillCategory === category.key ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-green-400"
+                  className="text-green-400 flex-shrink-0"
                 >
                   ▼
                 </motion.div>
@@ -207,8 +202,8 @@ const About = () => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6 mt-2">
-                  <div className="grid md:grid-cols-2 gap-4">
+                <div className="px-4 sm:px-6 pb-6 mt-2">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {category.skills.map((skill, skillIndex) => (
                       <SkillBar 
                         key={skill.skill} 
@@ -227,11 +222,11 @@ const About = () => {
       {/* Call to Action */}
       <motion.div
         variants={fadeIn("up", "spring", 0.5, 0.75)}
-        className="mt-16 text-center"
+        className="mt-12 sm:mt-16 text-center"
       >
         <div className="bg-gradient-to-r from-green-400 to-pink-500 p-[1px] rounded-lg inline-block">
-          <div className="bg-gray-900 px-8 py-4 rounded-lg">
-            <p className="text-white text-lg">
+          <div className="bg-gray-900 px-6 sm:px-8 py-4 rounded-lg">
+            <p className="text-white text-base sm:text-lg">
               Ready to collaborate on your next project?{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-pink-500 font-semibold">
                 Let's create something amazing together!
@@ -240,7 +235,7 @@ const About = () => {
           </div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 };
 
