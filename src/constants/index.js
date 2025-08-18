@@ -57,16 +57,16 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Works",
     children: [
       { id: "projects", title: "Projects" },
       { id: "experience", title: "Experience" },
     ],
   },
-  {
-    id: "ideas",
-    title: "Ideas",
-  }
+  // {
+  //   id: "ideas",
+  //   title: "Ideas",
+  // }
   ,
   {
     id: "contact",
@@ -268,71 +268,536 @@ const testimonials = [
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
-
+import businessplanner from "../assets/projects/businessApp.png";
+import yousentimentai from "../assets/projects/yousentimentai.png";
+import lexiqeai from "../assets/projects/lexiqeai.png"; 
+import pneumoscanai from "../assets/projects/pneomo.jpeg";
+import textsummarizer from "../assets/projects/textsummarizer.jpeg";
+import hotelbooking from "../assets/projects/HotelBooking.png";
 const projects = [
+  {
+    name: "Premium Business Planner with AI-Driven Analytics",
+    description:
+      "Built a full-stack AI-powered business planning platform using Google Gemini API, Plotly, and Streamlit. Features AI-generated business strategies, interactive financial dashboards, risk assessment matrix, and real-time analytics for entrepreneurs to create investor-ready business plans in hours.",
+    tags: [
+      { name: "Generative AI", color: "blue-text-gradient" },
+      { name: "Streamlit", color: "green-text-gradient" },
+      { name: "Plotly", color: "pink-text-gradient" },
+    ],
+    image: businessplanner, // replace with actual image variable
+    // source_code_link: "https://github.com/",
+  },
+  {
+    name: "YouSentimentAI - MLOps YouTube Sentiment Analysis",
+    description:
+      "Developed an end-to-end MLOps pipeline for YouTube comment sentiment analysis with LightGBM, TF-IDF, MLflow, DVC, and AWS. Built a responsive web app with real-time comment fetching, interactive sentiment visualizations, and automated CI/CD deployment.",
+    tags: [
+      { name: "MLOps", color: "blue-text-gradient" },
+      { name: "MLflow", color: "green-text-gradient" },
+      { name: "LightGBM", color: "pink-text-gradient" },
+    ],
+    image: yousentimentai,
+    // source_code_link: "https://github.com/",
+  },
+  {
+    name: "LexiQE AI - Legal Document Q&A Assistant",
+    description:
+      "Created an AI-powered assistant for legal document analysis using RAG, FAISS, and FLAN-T5. Allows users to upload PDFs and query them via a chat interface, delivering context-aware answers locally with full data privacy.",
+    tags: [
+      { name: "NLP", color: "blue-text-gradient" },
+      { name: "RAG", color: "green-text-gradient" },
+      { name: "Streamlit", color: "pink-text-gradient" },
+    ],
+    image: lexiqeai,
+    // source_code_link: "https://github.com/",
+  },
+  {
+    name: "PneumoScan AI - Pneumonia Detection System",
+    description:
+      "Built a deep learning medical imaging tool using TensorFlow/Keras to detect pneumonia from chest X-rays with 98.42% accuracy. Integrated Grad-CAM visualizations for explainability and deployed with a medical-grade Streamlit interface.",
+    tags: [
+      { name: "Deep Learning", color: "blue-text-gradient" },
+      { name: "TensorFlow", color: "green-text-gradient" },
+      { name: "Computer Vision", color: "pink-text-gradient" },
+    ],
+    image: pneumoscanai,
+    // source_code_link: "https://github.com/",
+  },
+  {
+    name: "AI Web Application for Text Summarization",
+    description:
+      "Developed a Flask-based AI summarization tool with customizable summary length, real-time text analysis, and sentence importance scoring using TF-IDF, Cosine Similarity, and NER. Interactive UI built with HTML/CSS/JavaScript.",
+    tags: [
+      { name: "NLP", color: "blue-text-gradient" },
+      { name: "Flask", color: "green-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+    ],
+    image: textsummarizer,
+    // source_code_link: "https://github.com/",
+  },
   {
     name: "Hotel Booking Analytics Dashboard with Power BI",
     description:
-      "Developed Power BI dashboards to analyze hotel bookings, customer loyalty, and booking channels. Used DAX for calculated columns, measures, and KPIs. Integrated data from multiple sources and optimized performance with drill-through functionality and advanced visuals.",
+      "Designed interactive Power BI dashboards to analyze hotel bookings, customer loyalty, and booking channels using DAX, KPIs, and drill-through features with multi-source data integration.",
     tags: [
-      {
-        name: "Data Analysis",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Data Modeling",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Data Visualization",
-        color: "pink-text-gradient",
-      },
+      { name: "Data Analysis", color: "blue-text-gradient" },
+      { name: "Power BI", color: "green-text-gradient" },
+      { name: "DAX", color: "pink-text-gradient" },
     ],
-    image: carrent,
+    image: hotelbooking,
     // source_code_link: "https://github.com/",
   },
   {
     name: "British Airways Analysis Dashboard with Tableau",
     description:
-      "Developed Tableau dashboards to analyze business operations, aircraft performance, and key metrics. Used filters, parameters, and calculated fields for dynamic reporting. Integrated multiple datasets to uncover insights like seasonality trends and customer segmentation",
+      "Developed Tableau dashboards analyzing operations, performance, and seasonality trends using filters, parameters, and calculated fields to support data-driven decision making.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: "Tableau", color: "blue-text-gradient" },
+      { name: "Data Visualization", color: "green-text-gradient" },
+      { name: "Business Analysis", color: "pink-text-gradient" },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    // source_code_link: "https://github.com/",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  
 ];
 
-export { services, technologies, experiences, testimonials, projects, otherTechnologies };
+
+
+
+import forageIcon from "../assets/cert/forage.jpeg";
+import microsoftIcon from "../assets/cert/microsoft.jpeg";
+import anacondaIcon from "../assets/cert/anaconda.jpeg";
+import knimeIcon from "../assets/cert/knime.jpeg";
+import hackerrankIcon from "../assets/cert/hackerrank.jpeg";
+import kaggleIcon from "../assets/cert/kaggle.jpeg";
+import linkedinIcon from "../assets/cert/linkedin.jpeg";
+import mathworksIcon from "../assets/cert/mathworks.jpeg";
+import openUniIcon from "../assets/cert/openuni.jpeg";
+import greatLearningIcon from "../assets/cert/greatlearning.jpeg";
+import googleIcon from "../assets/cert/google.jpeg";
+import freeCodeCampIcon from "../assets/cert/freecodecamp.jpeg";
+import futureLearnIcon from "../assets/cert/futurelearn.jpeg";
+import alisonIcon from "../assets/cert/alison.jpeg";
+import geeksforGeeksIcon from "../assets/cert/geeksforgeeks.jpeg";
+import { h } from "maath/dist/misc-7d870b3c.esm";
+
+const certifications = [
+  {
+    title: "Prompt Design in Vertex AI",
+    issuer: "Google Cloud",
+    date: "June 2025",
+    credentialId: "",
+    icon: googleIcon,
+    skills: ["Artificial Intelligence (AI)", "Generative AI"],
+    url: "https://www.credly.com/badges/6cea7eeb-1a29-42a7-8443-966d718b8ea0/public_url",
+  },
+  {
+    title: "Generative AI by Microsoft and LinkedIn",
+    issuer: "Microsoft",
+    date: "Mar 2025",
+    credentialId: "",
+    icon: microsoftIcon,
+    skills: ["Artificial Intelligence (AI)", "Generative AI"],
+    url: "https://www.linkedin.com/learning/certificates/ae4c30836bfbeeebbe26004b1398b330db0a862608b509f31fbf863e244ab839",
+  },
+  {
+    title: "Data Analysis by Microsoft and LinkedIn",
+    issuer: "Microsoft",
+    date: "Mar 2025",
+    credentialId: "",
+    icon: microsoftIcon,
+    skills: ["Data Analysis", "Data Visualization"],
+    url: "https://www.linkedin.com/learning/certificates/ecc8f1cf6ae0ffd5ca7ff66c031ab4773f6dae5a67bf306e79e78a8dc2f531f7",
+  },
+
+  {
+    title: "Data Science Professional Certificate",
+    issuer: "Anaconda, Inc.",
+    date: "Mar 2025",
+    credentialId: "",
+    icon: anacondaIcon,
+    skills: ["Data Science", "Python (Programming Language)", "Data Analysis", "Real-time Data"],
+    url: "https://www.linkedin.com/learning/certificates/9a9bc3e104d4cebed4f9d3e413d15948dafbfc1df642359f00af108c6f022169?trk=share_certificate",
+
+  },
+  {
+    title: "Data Science Professional Certificate by KNIME",
+    issuer: "KNIME",
+    date: "Mar 2025",
+    credentialId: "",
+    icon: knimeIcon,
+    skills: ["Artificial Intelligence for Business"],
+    url: "https://www.linkedin.com/learning/certificates/3e34afd6d26ecd2b216bfe1a36e7993f0132909c6ef63bcf07d3b3c9cf091adb",
+
+  },
+   
+  
+  {
+    title: "Deep Learning",
+    issuer: "Kaggle",
+    date: "Nov 2024",
+    credentialId: "",
+    icon: kaggleIcon,
+    skills: ["Machine Learning"],
+    url: "https://www.kaggle.com/learn/certification/yadidiahk/intro-to-deep-learning",
+
+  },
+  {
+    title: "Server Administration Essential Training",
+    issuer: "LinkedIn",
+    date: "Jul 2023",
+    credentialId: "",
+    icon: linkedinIcon,
+    skills: [],
+    url: "https://www.linkedin.com/learning/certificates/5bf4923c33abe29d6ee855e42dc92a5414d63dff89ce34bfd82fafc0233004ca",
+
+  },
+  {
+    title: "Certified Software Engineer",
+    issuer: "HackerRank",
+    date: "Apr 2025",
+    credentialId: "",
+    icon: hackerrankIcon,
+    skills: ["Java", "Problem Solving", "Python (Programming Language)", "Object-Oriented Programming (OOP), SQL"],
+    url: "https://www.hackerrank.com/certificates/8b50fc89c3f0",
+
+  },
+  {
+    title: "Restful API (Intermediate)",
+    issuer: "HackerRank",
+    date: "Dec 2024",
+    credentialId: "",
+    icon: hackerrankIcon,
+    skills: ["Data Analysis"],
+    url: "https://www.hackerrank.com/certificates/7199139728b0",
+
+  },
+  {
+    title: "SQL",
+    issuer: "HackerRank",
+    date: "Apr 2023",
+    credentialId: "",
+    icon: hackerrankIcon,
+    skills: ["MySQL"],
+    url: "https://www.hackerrank.com/certificates/5b24827f203d",
+
+  },
+
+   {
+    title: "Accenture Nordics - Software Engineering Job Simulation",
+    issuer: "Forage",
+    date: "Mar 2025",
+    credentialId: "wDZ9h8eu7kJWbaGF9",
+    icon: forageIcon,
+    skills: [],
+    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_NrbDkQHjF7rrYt5YF_1741192955322_completion_certificate.pdf",
+
+  },
+  {
+    title: "British Airways - Data Science Job Simulation",
+    issuer: "Forage",
+    date: "Mar 2025",
+    credentialId: "cpC8RLfEseze2YEav",
+    icon: forageIcon,
+    skills: [],
+    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_NrbDkQHjF7rrYt5YF_1741194624177_completion_certificate.pdf",
+
+  },
+  {
+    title: "Deloitte Australia - Data Analytics Job Simulation",
+    issuer: "Forage",
+    date: "Mar 2025",
+    credentialId: "AJMh2FggBygifKvfE",
+    icon: forageIcon,
+    skills: ["Microsoft Power BI"],
+    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_NrbDkQHjF7rrYt5YF_1741194356079_completion_certificate.pdf",
+
+  },
+  {
+    title: "PwC Switzerland - Digital Intelligence Job Simulation",
+    issuer: "Forage",
+    date: "Mar 2025",
+    credentialId: "Rziuwq6N7bzSFiwyo",
+    icon: forageIcon,
+    skills: ["Machine Learning"],
+    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/4sLyCPgmsy8DA6Dh3/Kaib4AmLSAG5mDsD4_4sLyCPgmsy8DA6Dh3_NrbDkQHjF7rrYt5YF_1741110381970_completion_certificate.pdf",
+
+  },
+  {
+    title: "MATLAB Onramp",
+    issuer: "MathWorks",
+    date: "Mar 2023",
+    credentialId: "",
+    icon: mathworksIcon,
+    skills: ["MATLAB", "Decision-Making"],
+    url: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=f78a8ff8-6aff-45d7-aafe-0701348596f8&",
+
+  },
+ 
+
+  {
+    title: "Artificial Intelligence",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Nov 2022",
+    credentialId: "",
+    icon: awsIcon,
+    skills: ["Machine Learning"],
+    url: "https://publuu.com/flip-book/101819/276800",
+
+  },  {
+    title: "Machine Learning",
+    issuer: "Kaggle",
+    date: "Mar 2022",
+    credentialId: "",
+    icon: kaggleIcon,
+    skills: ["Machine Learning"],
+    url: "https://www.kaggle.com/learn/certification/yadidiahk/intro-to-machine-learning",
+
+  },  {
+    title: "Build Actions for Google Assistant",
+    issuer: "Google Developers Group",
+    date: "Jun 2022",
+    credentialId: "",
+    icon: googleIcon,
+    skills: [],
+    url: "https://developers.google.com/profile/badges/playlists/actions-on-google/",
+
+  },
+  {
+    title: "Data Analysis with Python",
+    issuer: "freeCodeCamp",
+    date: "Jun 2022",
+    credentialId: "",
+    icon: freeCodeCampIcon,
+    skills: ["Python (Programming Language)", "Pandas (Software)", "Data Analysis"],
+    url: "https://freecodecamp.org/certification/fcc906defd5-0e1b-4ff7-b817-842b4fd75839/data-analysis-with-python-v7",
+
+  },
+  {
+    title: "Digital Skills: Web Analytics",
+    issuer: "FutureLearn",
+    date: "Jun 2022",
+    credentialId: "",
+    icon: futureLearnIcon,
+    skills: [],
+    url: "https://www.futurelearn.com/certificates/8pv7q7k",
+
+  },
+  {
+    title: "SQL",
+    issuer: "HackerRank",
+    date: "Jun 2025",
+    credentialId: "",
+    icon: hackerrankIcon,
+    skills: [],
+    url: "https://www.hackerrank.com/certificates/2e79360c73ad",
+
+  },{
+    title: "Rest API",
+    issuer: "HackerRank",
+    date: "Jun 2025",
+    credentialId: "",
+    icon: hackerrankIcon,
+    skills: [],
+    url: "https://www.hackerrank.com/certificates/89151e977077",
+
+  },
+
+  {
+    title: "Diploma in Computer Networking ",
+    issuer: "Alison",
+    date: "May 2022",
+    credentialId: "1480-24113466",
+    icon: alisonIcon,
+    skills: [],
+    url: "https://alison.com/certification/check/$2y$10$2.xjihfl2GvzXMN.qyvPQuaajEWUtI02qQVCtJYeZAGcWH7mXVqSu",
+
+  },
+
+  {
+    title: "Scientific Computing with Python",
+    issuer: "freeCodeCamp",
+    date: "May 2022",
+    credentialId: "",
+    icon: freeCodeCampIcon,
+    skills: [],
+    url: "https://freecodecamp.org/certification/fcc906defd5-0e1b-4ff7-b817-842b4fd75839/scientific-computing-with-python-v7",
+
+  },
+
+];
+
+
+export { services, technologies, experiences, testimonials, projects, otherTechnologies, certifications };
+
+// PUBLICATIONS & RESEARCH PAPERS
+const publications = [
+  {
+    id: 1,
+    title: "Optimizing Agricultural Practices Through Integrated IoT and ML Solutions",
+    journal: "Springer",
+    publisher: "Springer Nature",
+    date: "Feb 2025",
+    type: "Book Chapter",
+    doi: "10.1007/978-3-031-81369-6_8",
+    url: "https://link.springer.com/chapter/10.1007/978-3-031-81369-6_8",
+    pdfUrl: "https://link.springer.com/content/pdf/10.1007/978-3-031-81369-6_8.pdf", // May require access
+    abstract: "This research presents an innovative approach to modernizing agricultural practices by integrating Internet of Things (IoT) technologies with advanced Machine Learning (ML) algorithms. The study demonstrates how data-driven solutions can optimize crop yield, resource management, and sustainable farming practices.",
+    keywords: ["IoT", "Machine Learning", "Agriculture", "Smart Farming", "Optimization"],
+    authors: "Your Name, Co-Authors",
+    status: "Published",
+    color: "from-green-400 to-blue-500",
+    icon: "🌱"
+  },
+  {
+    id: 2,
+    title: "Identifying Security Threats in the System Using Automated Security Logs",
+    journal: "IEEE Xplore",
+    publisher: "IEEE",
+    date: "Dec 2024",
+    type: "Conference Paper",
+    doi: "10.1109/EXAMPLE.2024.10815284",
+    url: "https://ieeexplore.ieee.org/document/10815284",
+    pdfUrl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10815284", // IEEE PDF access
+    abstract: "This paper introduces an automated framework for identifying and analyzing security threats through intelligent log analysis. Using machine learning algorithms, the system can detect anomalous patterns and potential security breaches in real-time system logs.",
+    keywords: ["Cybersecurity", "Log Analysis", "Threat Detection", "Automation", "Machine Learning"],
+    authors: "Your Name, Co-Authors",
+
+    status: "Published",
+    color: "from-red-400 to-purple-500",
+    icon: "🔒"
+  },
+  {
+    id: 3,
+    title: "Sustainable Security Solutions for IoT: Enhancing Intrusion Detection Using AI and Machine Learning",
+    journal: "IEEE Xplore",
+    publisher: "IEEE",
+    date: "Dec 2024",
+    type: "Conference Paper",
+    doi: "10.1109/EXAMPLE.2024.10815208",
+    url: "https://ieeexplore.ieee.org/document/10815208",
+    pdfUrl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10815208", // IEEE PDF access
+    abstract: "This research focuses on developing sustainable security solutions for IoT ecosystems by leveraging AI and ML techniques for enhanced intrusion detection. The proposed framework addresses the growing security challenges in IoT networks while maintaining energy efficiency and scalability.",
+    keywords: ["IoT Security", "Intrusion Detection", "AI", "Machine Learning", "Sustainability"],
+    authors: "Your Name, Co-Authors",
+
+    status: "Published",
+    color: "from-blue-400 to-cyan-500",
+    icon: "🛡️"
+  }
+];
+
+// RESEARCH METRICS
+const researchMetrics = [
+  {
+    label: "Total Publications",
+    value: "3",
+    icon: "📄"
+  },
+  {
+    label: "Total Citations",
+    value: "5",
+    icon: "📊"
+  },
+  {
+    label: "H-Index",
+    value: "2",
+    icon: "📈"
+  },
+  {
+    label: "Research Areas",
+    value: "4",
+    icon: "🔬"
+  }
+];
+
+// RESEARCH AREAS
+const researchAreas = [
+  {
+    area: "IoT & Smart Systems",
+    publications: 2,
+    description: "Internet of Things, Smart Agriculture, Sustainable IoT Solutions",
+    color: "bg-green-500"
+  },
+  {
+    area: "Cybersecurity & AI",
+    publications: 2,
+    description: "Security Threat Detection, Intrusion Detection Systems, AI-driven Security",
+    color: "bg-red-500"
+  },
+  {
+    area: "Machine Learning Applications",
+    publications: 3,
+    description: "Applied ML in Agriculture, Security, and IoT Systems",
+    color: "bg-blue-500"
+  },
+  {
+    area: "Automation & Optimization",
+    publications: 2,
+    description: "Automated Systems, Process Optimization, Intelligent Analytics",
+    color: "bg-purple-500"
+  }
+];
+
+// PDF VIEWER COMPONENT DATA
+const pdfViewerConfig = {
+  enableDownload: true,
+  enablePrint: true,
+  enableSearch: true,
+  defaultZoom: 1.0,
+  toolbar: true,
+  navigation: true
+};
+
+// ACADEMIC PROFILES
+const academicProfiles = [
+  {
+    platform: "Google Scholar",
+    url: "https://scholar.google.com/citations?user=YOUR_ID",
+    icon: "🎓",
+    color: "text-blue-600"
+  },
+  {
+    platform: "ResearchGate",
+    url: "https://www.researchgate.net/profile/YOUR_PROFILE",
+    icon: "🔬",
+    color: "text-green-600"
+  },
+  {
+    platform: "ORCID",
+    url: "https://orcid.org/YOUR_ORCID_ID",
+    icon: "🆔",
+    color: "text-gray-600"
+  },
+  {
+    platform: "IEEE Xplore",
+    url: "https://ieeexplore.ieee.org/author/YOUR_ID",
+    icon: "⚡",
+    color: "text-blue-800"
+  }
+];
+
+// PUBLICATION STATS BY YEAR
+const publicationsByYear = [
+  { year: "2025", count: 1, papers: ["Optimizing Agricultural Practices..."] },
+  { year: "2024", count: 2, papers: ["Identifying Security Threats...", "Sustainable Security Solutions..."] }
+];
+
+
+
+
+
+export { 
+  publications, 
+  researchMetrics, 
+  researchAreas, 
+  pdfViewerConfig, 
+  academicProfiles,
+  publicationsByYear 
+};
+
+
+
+
+
