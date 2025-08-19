@@ -285,7 +285,7 @@ const projects = [
       { name: "Plotly", color: "pink-text-gradient" },
     ],
     image: businessplanner, // replace with actual image variable
-    // source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/YADIDidiah24/LLM-Projects/tree/main/Premium-Business-Start",
   },
   {
     name: "YouSentimentAI - MLOps YouTube Sentiment Analysis",
@@ -297,7 +297,7 @@ const projects = [
       { name: "LightGBM", color: "pink-text-gradient" },
     ],
     image: yousentimentai,
-    // source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/YADIDidiah24/Youtube-Sentiment-Analysis.git",
   },
   {
     name: "LexiQE AI - Legal Document Q&A Assistant",
@@ -309,7 +309,7 @@ const projects = [
       { name: "Streamlit", color: "pink-text-gradient" },
     ],
     image: lexiqeai,
-    // source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/YADIDidiah24/LLM-Projects/tree/main/LegalDocumentChatBot",
   },
   {
     name: "PneumoScan AI - Pneumonia Detection System",
@@ -321,7 +321,7 @@ const projects = [
       { name: "Computer Vision", color: "pink-text-gradient" },
     ],
     image: pneumoscanai,
-    // source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/YADIDidiah24/grad-proj",
   },
   {
     name: "AI Web Application for Text Summarization",
@@ -333,7 +333,7 @@ const projects = [
       { name: "JavaScript", color: "pink-text-gradient" },
     ],
     image: textsummarizer,
-    // source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/YADIDidiah24/AI-Web-applications/tree/main/text-summariser-spaCy",
   },
   {
     name: "Hotel Booking Analytics Dashboard with Power BI",
@@ -345,20 +345,20 @@ const projects = [
       { name: "DAX", color: "pink-text-gradient" },
     ],
     image: hotelbooking,
-    // source_code_link: "https://github.com/",
+    source_code_link: "https://www.linkedin.com/posts/yadidiah-kanaparthi_powerbi-dataanalytics-datavisualization-activity-7291168365581115393-QUS7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADQgvm4BE9wxq_daObrX94kcaAXvE06h7E4",
   },
-  {
-    name: "British Airways Analysis Dashboard with Tableau",
-    description:
-      "Developed Tableau dashboards analyzing operations, performance, and seasonality trends using filters, parameters, and calculated fields to support data-driven decision making.",
-    tags: [
-      { name: "Tableau", color: "blue-text-gradient" },
-      { name: "Data Visualization", color: "green-text-gradient" },
-      { name: "Business Analysis", color: "pink-text-gradient" },
-    ],
-    image: jobit,
-    // source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "British Airways Analysis Dashboard with Tableau",
+  //   description:
+  //     "Developed Tableau dashboards analyzing operations, performance, and seasonality trends using filters, parameters, and calculated fields to support data-driven decision making.",
+  //   tags: [
+  //     { name: "Tableau", color: "blue-text-gradient" },
+  //     { name: "Data Visualization", color: "green-text-gradient" },
+  //     { name: "Business Analysis", color: "pink-text-gradient" },
+  //   ],
+  //   image: jobit,
+  //   source_code_link: "https://www.linkedin.com/posts/yadidiah-kanaparthi_tableau-dataanalytics-datavisualization-activity-7291802554642886656-6-VR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADQgvm4BE9wxq_daObrX94kcaAXvE06h7E4",
+  // },
   
 ];
 
