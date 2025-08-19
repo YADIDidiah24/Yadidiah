@@ -11,6 +11,9 @@ const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
       className="w-full bg-gradient-to-r from-green-400 to-pink-500 p-[2px] rounded-[20px] shadow-lg"
     >
       <div className="bg-gray-900 rounded-[20px] py-6 px-4 sm:px-6 md:px-10 min-h-[250px] sm:min-h-[280px] flex justify-evenly items-center flex-col">
@@ -27,7 +30,7 @@ const SkillBar = ({ skill, level, delay }) => (
     className="mb-4"
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true }}
+    viewport={{ once: true, amount: 0.1 }}
   >
     <div className="flex justify-between mb-2">
       <span className="text-white font-medium text-sm sm:text-base">{skill}</span>
@@ -50,7 +53,7 @@ const ExperienceCard = ({ year, role, company, description, index }) => (
     className="relative pl-6 sm:pl-8 pb-8 border-l-2 border-green-400"
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true }}
+    viewport={{ once: true, amount: 0.1 }}
   >
     <div className="absolute -left-2 top-0 w-4 h-4 bg-gradient-to-r from-green-400 to-pink-500 rounded-full"></div>
     <div className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg">
@@ -68,7 +71,7 @@ const StatCard = ({ number, label, icon, index }) => (
     className="text-center p-4 sm:p-6 bg-gray-800 rounded-lg shadow-lg"
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true }}
+    viewport={{ once: true, amount: 0.1 }}
   >
     <div className="text-2xl sm:text-3xl mb-2">{icon}</div>
     <motion.h3
@@ -126,25 +129,24 @@ const About = () => {
     { number: "4+", label: "Years Experience", icon: "🚀" },
     { number: "50+", label: "Projects Completed", icon: "💼" },
     { number: "15+", label: "Technologies", icon: "⚡" },
-    { number: "100%", label: "Client Satisfaction", icon: "⭐" }
   ];
 
   return (
     <section 
       id="about" 
-      className="w-full min-h-screen py-10 sm:py-16 lg:py-20  bg-gray-900/50 backdrop-blur-md rounded-xl shadow-lg border border-gray-700/50"
+      className="w-full min-h-screen py-10 sm:py-16 lg:py-20 bg-gray-900/50 backdrop-blur-md rounded-xl shadow-lg border border-gray-700/50"
       style={{ 
         background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
         position: 'relative',
         zIndex: 1
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           variants={textVariant()}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <p className="text-gray-400 text-base sm:text-lg font-medium">Introduction</p>
           <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">Overview.</h2>
@@ -154,7 +156,7 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-4 mb-8 text-gray-300 text-base sm:text-lg max-w-3xl leading-relaxed"
         >
           I am a skilled computer science professional based in Dubai, UAE, with over four years of coding experience
@@ -168,11 +170,11 @@ const About = () => {
           variants={textVariant()}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mb-12 sm:mb-16"
         >
           <h3 className="text-white text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Key Achievements</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {stats.map((stat, index) => (
               <StatCard key={stat.label} {...stat} index={index} />
             ))}
@@ -180,18 +182,26 @@ const About = () => {
         </motion.div>
 
         {/* Services Cards */}
-        <div className="mt-12 sm:mt-16 flex flex-wrap gap-4 sm:gap-6 lg:gap-8 justify-center mb-12 sm:mb-16">
-          {services.map((service, index) => (
-            <ServiceCard key={service.title} index={index} {...service} />
-          ))}
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-12 sm:mt-16 mb-12 sm:mb-16"
+        >
+          <h3 className="text-white text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Services</h3>
+          <div className="flex flex-wrap gap-4 sm:gap-6 lg:gap-8 justify-center">
+            {services.map((service, index) => (
+              <ServiceCard key={service.title} index={index} {...service} />
+            ))}
+          </div>
+        </motion.div>
 
         {/* Technical Skills Section */}
         <motion.div
           variants={textVariant()}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-12 sm:mt-16"
         >
           <h3 className="text-white text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Technical Skills</h3>
@@ -209,7 +219,7 @@ const About = () => {
                 variants={fadeIn("up", "spring", index * 0.1, 0.75)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="bg-gray-800 rounded-lg overflow-hidden"
               >
                 <button
@@ -259,7 +269,7 @@ const About = () => {
           variants={fadeIn("up", "spring", 0.5, 0.75)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-12 sm:mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-green-400 to-pink-500 p-[1px] rounded-lg inline-block">
