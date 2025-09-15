@@ -14,7 +14,7 @@ const Hero = () => {
 
         < div className="flex-1">
           <h1 className={`${styles.heroHeadText} text-white leading-tight drop-shadow-2xl`}>
-            Hi, I'm <span className="text-[#4ADE80] drop-shadow-lg">Yadidiah 👋🏾</span>
+            Hi, I'm <span className="text-[#4ADE80] drop-shadow-lg">Yadidiah Kanaparthi👋🏾</span>
           </h1>
           <p className={`${styles.heroSubText}  text-gray-300 drop-shadow-lg leading-relaxed`}>
             I craft intelligent systems that transform ideas into reality,
