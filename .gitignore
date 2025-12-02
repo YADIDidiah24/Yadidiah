@@ -27,3 +27,6 @@ dist-ssr
 
 # vscode
 .vscode
+.next
+.out
+.build

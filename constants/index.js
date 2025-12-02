@@ -654,7 +654,42 @@ const certifications = [
 ];
 
 
-export { services, technologies, professionalExperience as experiences, testimonials, projects, otherTechnologies, certifications };
+const education = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    institution: "Canadian University Dubai",
+    date: "Aug 2021 - May 2025",
+    icon: "🎓",
+    points: [
+      "Specialized in Artificial Intelligence and Machine Learning.",
+      "Advanced coursework in Deep Learning, Computer Vision, NLP, and MLOps.",
+      "Published 3 peer-reviewed research papers in IEEE & Springer.",
+    ],
+  },
+];
+
+const blogPosts = [
+  {
+    title: "Building Production-Ready LLM Applications with RAG",
+    excerpt: "A comprehensive guide to implementing Retrieval-Augmented Generation systems for real-world applications.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
+    url: "https://medium.com/@yadidiah.k/building-production-ready-llm-applications-with-rag-0ff4fa016f0e",
+  },
+  {
+    title: "MLOps Best Practices: From Jupyter to Production",
+    excerpt: "Learn how to transform experimental ML models into production-grade systems using MLflow, DVC, and modern CI/CD pipelines.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+    url: "https://medium.com/@yadidiah.k/mlops-best-practices-how-to-take-models-from-jupyter-notebooks-to-production-49525b9f3885",
+  },
+  {
+    title: "Deep Learning for Medical Imaging",
+    excerpt: "Building an explainable AI system for pneumonia detection from chest X-rays using CNNs and Grad-CAM visualizations.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800",
+    url: "https://medium.com/@yadidiah.k/deep-learning-for-medical-imaging-pneumonia-detection-from-chest-x-rays-c1518175f5fc",
+  },
+];
+
+export { services, technologies, professionalExperience as experiences, testimonials, projects, otherTechnologies, certifications, education, blogPosts };
 
 // PUBLICATIONS & RESEARCH PAPERS
 const publications = [

@@ -1,13 +1,13 @@
-import { BrowserRouter } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react"
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Education, Blog, ThemeToggle, StarsCanvas } from "./components";
+'use client'
 
-const App = () => {
+import { Analytics } from "@vercel/analytics/react"
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Education, Blog, StarsCanvas } from "../components";
+
+export default function Home() {
   return (
-    <BrowserRouter>
-      <ThemeToggle />
+    <>
       <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+        <div>
           <Navbar />
           <Hero />
         </div>
@@ -24,8 +24,6 @@ const App = () => {
         </div>
       </div>
     <Analytics />
-    </BrowserRouter>
+    </>
   );
 }
-
-export default App;

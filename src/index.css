@@ -10,7 +10,71 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
+}
+
+/* Dark theme default */
+body {
+  background-color: #050816;
+  color: #f3f3f3;
+}
+
+/* Light theme overrides */
+.light {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Light Theme Comprehensive Overrides */
+.light * {
+  color: inherit;
+}
+
+.light .bg-primary,
+.light .bg-tertiary,
+.light [class*="bg-black"],
+.light [class*="bg-gray-900"],
+.light [class*="bg-gray-800"] {
+  background-color: #f8fafc !important;
+}
+
+.light [class*="text-white"],
+.light [class*="text-primary"] {
+  color: #0f172a !important;
+}
+
+.light [class*="text-secondary"] {
+  color: #64748b !important;
+}
+
+.light [class*="text-gray-300"] {
+  color: #475569 !important;
+}
+
+.light [class*="bg-gradient-to-br"][class*="gray-"],
+.light [class*="backdrop-blur"] {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.light [class*="bg-tertiary"],
+.light input,
+.light textarea {
+  background-color: #f1f5f9 !important;
+  border: 2px solid #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light .bg-hero-pattern {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%) !important;
+}
+
+.light canvas {
+  opacity: 0.5 !important;
 }
 
 .hash-span {

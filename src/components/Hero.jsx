@@ -12,7 +12,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#4ADE80] to-[#22D3EE]" />
         </div>
 
-        < div className="flex-1">
+        <div className="flex-1">
           <h1 className={`${styles.heroHeadText} text-white leading-tight drop-shadow-2xl`}>
             Hi, I'm <span className="text-[#4ADE80] drop-shadow-lg">Yadidiah Kanaparthi</span> 
 {/*             👋🏾 */}
@@ -23,6 +23,8 @@ const Hero = () => {
             that solve complex real-world problems. From predictive analytics
             to generative AI, I turn data into actionable insights that drive innovation.
           </p>
+
+
 
         </div>
       </div>
