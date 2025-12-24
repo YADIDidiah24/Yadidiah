@@ -1,7 +1,7 @@
 'use client'
 
 import { Analytics } from "@vercel/analytics/react"
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Education, Blog, StarsCanvas } from "../components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, Education, Blog, StarsCanvas, Certifications } from "./components";
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
         <Tech />
         <Works />
         <Education />
+        <Certifications />
         <Blog />
-        <Feedbacks />
         <div className='relative z-0'>
           <Contact />
           <StarsCanvas />

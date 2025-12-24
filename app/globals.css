@@ -13,6 +13,19 @@
   text-decoration: none;
 }
 
+:root {
+  /* CSS Variables for components that need them (e.g., react-vertical-timeline) */
+  --primary-color: #0B0B0F;
+  --secondary-color: #13151A;
+  --tertiary-color: #1A1D23;
+  --quaternary-color: #21252B;
+  --accent-color: #6366F1;
+  --accent-light: #8B5CF6;
+  --text-primary-color: #F8FAFC;
+  --text-secondary-color: #94A3B8;
+  --text-muted-color: #64748B;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Inter', system-ui, sans-serif;

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
   mode: "jit",
   darkMode: 'class', // Enable class-based dark mode
   theme: {
@@ -114,7 +114,7 @@ module.exports = {
       },
       
       backgroundImage: {
-        'hero-pattern': "url('/src/assets/herobg.png')",
+        'hero-pattern': "url('/assets/herobg.png')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'grid-pattern': "url(\"data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%239C92AC' fill-opacity='0.1'%3e%3ccircle cx='7' cy='7' r='7'/%3e%3c/g%3e%3g%3c/svg%3e\")",
